@@ -25,12 +25,12 @@ const StatsPage = () => {
       }
     });
 
-    return [
-      { name: "Text", value: counts.Text, color: "#8b5cf6" }, 
-      { name: "Call", value: counts.Call, color: "#1a3a30" },
-      { name: "Video", value: counts.Video, color: "#22c55e" },
-    ].filter((item) => item.value > 0);
-  }, [activities]);
+  //   return [
+  //     { name: "Text", value: counts.Text, color: "#8b5cf6" }, 
+  //     { name: "Call", value: counts.Call, color: "#1a3a30" },
+  //     { name: "Video", value: counts.Video, color: "#22c55e" },
+  //   ].filter((item) => item.value > 0);
+  // }, [activities]);
 
   return (
     <div className="max-w-7xl mx-auto my-12 px-6">
