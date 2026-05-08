@@ -1,12 +1,65 @@
-# React + Vite
+# 🛡️ KeenKeeper – Friendship Maintenance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**KeenKeeper** is a professional relationship management dashboard designed to help users maintain consistent connections with their friends and professional network. It tracks interaction history, analyzes relationship health, and provides visual insights through a modern, intuitive interface.
 
-Currently, two official plugins are available:
+🚀 **[Live Demo](https://keen-keeper-zeta-virid.vercel.app/)** | 📂 **[GitHub Repository](https://github.com/mdjihad-dev/Keen-Keeper)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌟 Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Personalized Friend Dashboard:** Access detailed profiles of friends, including bios, relationship status, and specific contact goals.
+- **One-Click Check-In:** Log interactions (Call, Text, or Video) instantly with a single click.
+- **Dynamic Timeline:** A comprehensive history of all interactions with automatic date stamping and category-specific UI styling.
+- **Relationship Analytics:** Advanced visual representation of interaction patterns using **Recharts** (Donut Chart integration).
+- **Real-Time Notifications:** Instant feedback via **React-Toastify** for every logged activity or system update.
+- **Responsive Navigation:** A fully optimized Navbar designed for seamless transitions between mobile, tablet, and desktop views.
+- **Smart Routing:** Robust navigation architecture using **React Router**, including a custom-designed **404 Error Page**.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Core:** React.js (Vite)
+- **Styling:** Tailwind CSS, DaisyUI
+- **Routing:** React Router v7
+- **Icons:** React Icons (Io5, Md, Im)
+- **Visualizations:** Recharts
+- **Notifications:** React-Toastify
+- **State Management:** React Context API
+
+---
+
+## ⚙️ Installation & Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/mdjihad-dev/Keen-Keeper.git](https://github.com/mdjihad-dev/Keen-Keeper.git)
+
+
+---
+
+## Project Structure
+
+```md id="t4g6r8"
+## 📂 Project Structure
+
+```bash
+src/
+├── components/
+├── pages/
+├── routes/
+├── context/
+├── assets/
+└── main.jsx
+
+---
+*👨‍💻 Author
+
+* Jahidul Islam (MD Jihad)
+
+* GitHub: @mdjihad-dev
+
+* Role: Aspiring Frontend Web Developer
+
+* Focus: Modern JavaScript Frameworks & UI/UX Optimization
