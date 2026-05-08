@@ -23,7 +23,7 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `font-semibold text-base ${isActive ? "bg-green-900 text-white" : ""}`
                 }
-                to={"#"}
+                to={"/"}
               >
                 <IoMdHome />
                 Home

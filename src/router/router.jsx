@@ -13,8 +13,12 @@ const router = createBrowserRouter([
                 Component: HomePage
             },
             {
-                path: '/:id',
-                loader: ({params}) => fetch(`/friend.json/${params.id}`),
+                path: '/details/:id',
+                loader: async({params}) => {
+                   const res = await fetch(`/friend.json`);
+                   const data = await res.json();
+                   return data.find(f => f.id == params.id)
+                },
                 Component: FriendDetails
             }
         ]
