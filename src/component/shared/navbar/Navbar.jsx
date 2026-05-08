@@ -31,10 +31,14 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className={(isActive) =>
-                  `font-semibold text-base ${isActive ? "bg-green-900 text-white" : ""}`
+                to="/timeline"
+                className={({ isActive }) =>
+                  `font-semibold text-base flex items-center gap-2 p-2 rounded-lg transition-all ${
+                    isActive
+                      ? "bg-[#244D3F] text-white" // একটিভ হলে তোমার থিম কালার (সবুজ)
+                      : "text-gray-600 hover:bg-gray-100" // একটিভ না থাকলে নরমাল কালার
+                  }`
                 }
-                to={"#"}
               >
                 <MdOutlineWatchLater />
                 Timeline
@@ -42,10 +46,14 @@ const Navbar = () => {
             </li>
             <li>
               <NavLink
-                className={(isActive) =>
-                  `font-semibold text-base ${isActive ? "bg-green-900 text-white" : ""}`
+                className={({ isActive }) =>
+                  `font-semibold text-base flex items-center gap-2 p-2 rounded-lg transition-all ${
+                    isActive
+                      ? "bg-[#244D3F] text-white" // একটিভ হলে তোমার থিম কালার (সবুজ)
+                      : "text-gray-600 hover:bg-gray-100" // একটিভ না থাকলে নরমাল কালার
+                  }`
                 }
-                to={"/"}
+                to={"/stats"}
               >
                 <ImStatsBars />
                 Stats

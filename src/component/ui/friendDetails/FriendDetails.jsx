@@ -1,5 +1,8 @@
 import React from "react";
 import { useLoaderData } from "react-router";
+import { useContext } from 'react';
+import { toast } from 'react-toastify';
+import { TimelineContext } from '../../../mainLayout/Root'; // পাথ ঠিক করে নিও
 import {
   IoCallOutline,
   IoChatbubbleOutline,
@@ -7,6 +10,7 @@ import {
 } from "react-icons/io5";
 
 const FriendDetails = () => {
+    const { addActivity } = useContext(TimelineContext);
 
   const {
     name,
@@ -22,10 +26,8 @@ const FriendDetails = () => {
   return (
     <div className="max-w-7xl mx-auto my-16 px-4">
       <div className="grid lg:grid-cols-12 gap-8 items-start">
-
         {/* Left Side: Profile Card & Action Buttons (Span 4) */}
         <div className="lg:col-span-4 space-y-6">
-
           {/* Profile Card */}
           <div className="bg-white shadow-sm border border-gray-100 rounded-2xl py-10 px-6 text-center space-y-4">
             <img
@@ -63,7 +65,6 @@ const FriendDetails = () => {
 
           {/* Left Bottom Buttons */}
           <div className="flex flex-col gap-3">
-
             <button className="btn bg-white border-gray-200 text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2">
               <span>🔔</span> Snooze 2 Weeks
             </button>
@@ -75,16 +76,13 @@ const FriendDetails = () => {
             <button className="btn bg-white border-gray-200 text-red-500 hover:bg-red-50 flex items-center justify-center gap-2">
               <span>🗑️</span> Delete
             </button>
-
           </div>
         </div>
 
         {/* Right Side: Stats & Goals (Span 8) */}
         <div className="lg:col-span-8 space-y-6">
-
           {/* Top Stats Row */}
           <div className="grid md:grid-cols-3 gap-4">
-
             <div className="bg-white border border-gray-100 shadow-sm rounded-2xl py-8 px-4 text-center">
               <h2 className="text-[#244D3F] font-bold text-4xl">
                 {days_since_contact}
@@ -120,9 +118,9 @@ const FriendDetails = () => {
             <button className="btn btn-sm bg-gray-100 border-none text-gray-600 px-6">
               Edit
             </button>
-
           </div>
 
+          {/* Quick Check-In Card */}
           {/* Quick Check-In Card */}
           <div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8">
             <h3 className="text-[#244D3F] font-bold text-lg mb-6">
@@ -130,22 +128,42 @@ const FriendDetails = () => {
             </h3>
 
             <div className="grid grid-cols-3 gap-4">
-
-              <button className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-colors">
-                <IoCallOutline className="text-2xl mb-2" />
+              {/* Call Button */}
+              <button
+                onClick={() => {
+                  addActivity("Call", name); // ডাটা সেভ হবে
+                  toast.success(`Call session with ${name} has been recorded!`);
+                }}
+                className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-all border border-transparent hover:border-red-200 group"
+              >
+                <IoCallOutline className="text-2xl mb-2 group-hover:text-red-500" />
                 <span className="text-sm font-medium">Call</span>
               </button>
 
-              <button className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-colors">
-                <IoChatbubbleOutline className="text-2xl mb-2" />
+              {/* Text Button */}
+              <button
+                onClick={() => {
+                  addActivity("Text", name); 
+                  toast.success(`Text session with ${name} has been recorded!`);
+                }}
+                
+                className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-all border border-transparent hover:border-cyan-200 group"
+              >
+                <IoChatbubbleOutline className="text-2xl mb-2 group-hover:text-cyan-500" />
                 <span className="text-sm font-medium">Text</span>
               </button>
 
-              <button className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-colors">
-                <IoVideocamOutline className="text-2xl mb-2" />
+              {/* Video Button */}
+              <button
+                onClick={() => {
+                  addActivity("Video", name);
+                  toast.success(`Video session with ${name} has been recorded!`);
+                }}
+                className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-all border border-transparent hover:border-pink-200 group"
+              >
+                <IoVideocamOutline className="text-2xl mb-2 group-hover:text-pink-500" />
                 <span className="text-sm font-medium">Video</span>
               </button>
-              
             </div>
           </div>
         </div>

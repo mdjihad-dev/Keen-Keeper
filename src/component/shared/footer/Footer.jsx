@@ -2,12 +2,13 @@ import React from 'react';
 
 const Footer = () => {
     return (
-      <footer className="footer footer-horizontal footer-center bg-[#1A8862] text-white rounded p-10">
-        <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+      <footer className="footer footer-horizontal footer-center bg-[#244D3F] text-white rounded px-10 py-24">
+        <nav className="gap-4">
+          <h2 className="text-4xl font-bold">KeenKeeper</h2>
+          <p>
+            Your personal shelf of meaningful connections. Browse, tend, and
+            nurture the relationships that matter most.
+          </p>
         </nav>
         <nav>
           <div className="grid grid-flow-col gap-4">
