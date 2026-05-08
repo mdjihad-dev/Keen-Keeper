@@ -12,7 +12,6 @@ import { TimelineContext } from "../../mainLayout/Root";
 const StatsPage = () => {
   const { activities } = useContext(TimelineContext);
 
-  // ইন্টারঅ্যাকশন অনুযায়ী ডাটা প্রসেস করা
   const chartData = useMemo(() => {
     const counts = {
       Call: 0,

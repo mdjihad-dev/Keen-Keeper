@@ -2,12 +2,17 @@ import React from "react";
 import { useLoaderData } from "react-router";
 import { useContext } from 'react';
 import { toast } from 'react-toastify';
-import { TimelineContext } from '../../../mainLayout/Root'; // পাথ ঠিক করে নিও
+import { TimelineContext } from '../../../mainLayout/Root';
+
 import {
   IoCallOutline,
   IoChatbubbleOutline,
   IoVideocamOutline,
 } from "react-icons/io5";
+
+import { MdDelete } from "react-icons/md";
+import { FaArchive } from "react-icons/fa";
+import { RiNotificationSnoozeFill } from "react-icons/ri";
 
 const FriendDetails = () => {
     const { addActivity } = useContext(TimelineContext);
@@ -21,11 +26,13 @@ const FriendDetails = () => {
     goal,
     next_due_date,
     bio,
+    days
   } = useLoaderData();
 
   return (
     <div className="max-w-7xl mx-auto my-16 px-4">
       <div className="grid lg:grid-cols-12 gap-8 items-start">
+        
         {/* Left Side: Profile Card & Action Buttons (Span 4) */}
         <div className="lg:col-span-4 space-y-6">
           {/* Profile Card */}
@@ -66,15 +73,24 @@ const FriendDetails = () => {
           {/* Left Bottom Buttons */}
           <div className="flex flex-col gap-3">
             <button className="btn bg-white border-gray-200 text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2">
-              <span>🔔</span> Snooze 2 Weeks
+              <span>
+                <RiNotificationSnoozeFill />
+              </span>{" "}
+              Snooze 2 Weeks
             </button>
 
             <button className="btn bg-white border-gray-200 text-gray-700 hover:bg-gray-50 flex items-center justify-center gap-2">
-              <span>📂</span> Archive
+              <span>
+                <FaArchive />
+              </span>{" "}
+              Archive
             </button>
 
             <button className="btn bg-white border-gray-200 text-red-500 hover:bg-red-50 flex items-center justify-center gap-2">
-              <span>🗑️</span> Delete
+              <span>
+                <MdDelete />
+              </span>{" "}
+              Delete
             </button>
           </div>
         </div>
@@ -91,8 +107,8 @@ const FriendDetails = () => {
             </div>
 
             <div className="bg-white border border-gray-100 shadow-sm rounded-2xl py-8 px-4 text-center">
-              <h2 className="text-[#244D3F] font-bold text-4xl">{goal}</h2>
-              <p className="text-[#64748B] text-sm mt-1">Goal (Days)</p>
+              <h2 className="text-[#244D3F] font-bold text-4xl">30</h2>
+              <p className="text-[#64748B] text-sm mt-1">{days} Days</p>
             </div>
 
             <div className="bg-white border border-gray-100 shadow-sm rounded-2xl py-8 px-4 text-center">
@@ -143,10 +159,9 @@ const FriendDetails = () => {
               {/* Text Button */}
               <button
                 onClick={() => {
-                  addActivity("Text", name); 
+                  addActivity("Text", name);
                   toast.success(`Text session with ${name} has been recorded!`);
                 }}
-                
                 className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-all border border-transparent hover:border-cyan-200 group"
               >
                 <IoChatbubbleOutline className="text-2xl mb-2 group-hover:text-cyan-500" />
@@ -157,7 +172,9 @@ const FriendDetails = () => {
               <button
                 onClick={() => {
                   addActivity("Video", name);
-                  toast.success(`Video session with ${name} has been recorded!`);
+                  toast.success(
+                    `Video session with ${name} has been recorded!`,
+                  );
                 }}
                 className="flex flex-col items-center justify-center py-6 bg-[#F8FAFC] rounded-xl hover:bg-gray-100 transition-all border border-transparent hover:border-pink-200 group"
               >

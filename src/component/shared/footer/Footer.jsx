@@ -4,8 +4,8 @@ const Footer = () => {
     return (
       <footer className="footer footer-horizontal footer-center bg-[#244D3F] text-white rounded px-10 py-24">
         <nav className="gap-4">
-          <h2 className="text-4xl font-bold">KeenKeeper</h2>
-          <p>
+          <h2 className="text-5xl font-bold text-white">KeenKeeper</h2>
+          <p className='text-white'>
             Your personal shelf of meaningful connections. Browse, tend, and
             nurture the relationships that matter most.
           </p>

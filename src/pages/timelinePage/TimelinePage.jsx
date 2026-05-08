@@ -1,30 +1,25 @@
 import React, { useContext } from "react";
-import { TimelineContext } from "../../mainLayout/Root"; // তোমার পাথ অনুযায়ী ঠিক করে নিও
+import { TimelineContext } from "../../mainLayout/Root";
 import { IoCall, IoChatbubble, IoVideocam } from "react-icons/io5";
 
 const TimelinePage = () => {
-  // ১. কনটেক্সট থেকে সব অ্যাক্টিভিটি নিয়ে আসলাম
   const { activities } = useContext(TimelineContext);
 
-  // ২. আইকন এবং কালার সেট করার জন্য একটা হেল্পার ফাংশন
   const getActionDetails = (type) => {
     switch (type) {
       case "Call":
         return {
           icon: <IoCall />,
-          color: "border-red-500",
           textColor: "text-red-500",
         };
       case "Text":
         return {
           icon: <IoChatbubble />,
-          color: "border-cyan-400",
           textColor: "text-cyan-400",
         };
       case "Video":
         return {
           icon: <IoVideocam />,
-          color: "border-pink-500",
           textColor: "text-pink-500",
         };
       default:
@@ -45,7 +40,7 @@ const TimelinePage = () => {
             return (
               <div
                 key={log.id}
-                className={`flex items-center gap-5 bg-white p-5 shadow-sm rounded-xl border-l-8 ${color} border-t border-r border-b border-gray-50 transition-transform hover:scale-[1.01]`}
+                className={`flex items-center gap-5 bg-white p-5 shadow-sm rounded-xl border-l-8 ${color} border-t border-r border-b border-gray-50`}
               >
                 <div
                   className={`text-2xl p-3 bg-gray-50 rounded-full ${textColor}`}

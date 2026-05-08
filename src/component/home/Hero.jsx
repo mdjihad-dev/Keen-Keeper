@@ -3,7 +3,7 @@ import { MdAdd } from 'react-icons/md';
 
 const Hero = () => {
     return (
-      <div className="max-w-7xl mx-auto flex justify-center items-center my-28">
+      <section className="max-w-7xl mx-auto flex justify-center items-center my-28">
         <div className="max-w-4xl text-center space-y-4">
           <h2 className="text-5xl font-semibold text-[#1F2937]">
             Friends to keep close in your life
@@ -18,7 +18,7 @@ const Hero = () => {
             Add a Friend
           </button>
         </div>
-      </div>
+      </section>
     );
 };
 

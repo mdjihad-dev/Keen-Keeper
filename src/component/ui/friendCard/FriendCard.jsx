@@ -1,9 +1,9 @@
-import React, { use } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
 
 const FriendCard = ({ data }) => {
-const { id, name, picture, status, tags } = data;
+const { id, name, picture, status, tags, days } = data;
 
   return (
     <Link to={`/details/${id}`}>
@@ -11,12 +11,12 @@ const { id, name, picture, status, tags } = data;
         <img
           className="mx-auto w-32 h-auto object-cover rounded-full"
           src={picture}
-          alt=""
+          alt="friend picture"
         />
         <h2 className="text-xl font-bold">{name}</h2>
-        <h3 className="text-base font-semibold">62 Days Ago</h3>
+        <h3 className="text-base font-semibold">{days} Ago</h3>
         {tags.map((tag, index) => (
-          <p key={index} className="bg-[#CBFADB] w-16 rounded-lg mx-auto px-2">
+          <p key={index} className="bg-[#CBFADB] w-20 rounded-lg mx-auto">
             {tag}
           </p>
         ))}

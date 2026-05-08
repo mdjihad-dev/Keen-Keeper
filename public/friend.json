@@ -8,7 +8,7 @@
     "status": "overdue",
     "tags": ["Developer"],
     "bio": "Met during our university years. We still catch up about books and hiking trips.",
-    "goal": 14,
+    "days": 30,
     "next_due_date": "2026-05-10"
   },
   {
@@ -20,7 +20,7 @@
     "status": "on-track",
     "tags": ["buddy"],
     "bio": "Former coworker who now trains with me every Friday evening.",
-    "goal": 10,
+    "days": 10,
     "next_due_date": "2026-05-14"
   },
   {
@@ -32,7 +32,7 @@
     "status": "almost due",
     "tags": [ "travel"],
     "bio": "We became friends after planning a local community trip together.",
-    "goal": 12,
+    "days": 12,
     "next_due_date": "2026-05-09"
   },
   {
@@ -44,7 +44,7 @@
     "status": "overdue",
     "tags": ["football"],
     "bio": "Old school friend who loves discussing football matches.",
-    "goal": 15,
+    "days": 15,
     "next_due_date": "2026-05-07"
   },
   {
@@ -56,7 +56,7 @@
     "status": "on-track",
     "tags": ["freelance"],
     "bio": "Creative designer friend who shares productivity tips regularly.",
-    "goal": 10,
+    "days": 54,
     "next_due_date": "2026-05-18"
   },
   {
@@ -68,7 +68,7 @@
     "status": "almost due",
     "tags": ["friend"],
     "bio": "We met through online gaming tournaments and became close friends.",
-    "goal": 14,
+    "days": 14,
     "next_due_date": "2026-05-08"
   },
   {
@@ -80,7 +80,7 @@
     "status": "on-track",
     "tags": ["creative"],
     "bio": "Photography enthusiast who enjoys city photo walks.",
-    "goal": 7,
+    "days": 7,
     "next_due_date": "2026-05-13"
   },
   {
@@ -92,7 +92,7 @@
     "status": "overdue",
     "tags": ["career"],
     "bio": "A mentor figure who helped me improve career planning skills.",
-    "goal": 14,
+    "days": 20,
     "next_due_date": "2026-05-06"
   },
   {
@@ -104,7 +104,7 @@
     "status": "almost due",
     "tags": ["buddy"],
     "bio": "We attend live music concerts and festivals together.",
-    "goal": 10,
+    "days": 10,
     "next_due_date": "2026-05-11"
   },
   {
@@ -116,7 +116,7 @@
     "status": "on-track",
     "tags": ["tech"],
     "bio": "Tech enthusiast friend who loves discussing startup ideas.",
-    "goal": 12,
+    "days": 35,
     "next_due_date": "2026-05-16"
   },
   {
@@ -128,7 +128,7 @@
     "status": "overdue",
     "tags": ["writer"],
     "bio": "Book club friend who always recommends thoughtful novels.",
-    "goal": 14,
+    "days": 14,
     "next_due_date": "2026-05-05"
   },
   {
@@ -140,7 +140,7 @@
     "status": "on-track",
     "tags": ["cycling"],
     "bio": "Weekend cycling partner who enjoys long outdoor rides.",
-    "goal": 10,
+    "days": 10,
     "next_due_date": "2026-05-15"
   }
 ]

@@ -34,7 +34,7 @@ const Root = () => {
           <Outlet />
           <ToastContainer
             position="top-center"
-            autoClose={3000}
+            autoClose={2000}
           />
         </main>
         <Footer />

@@ -8,6 +8,7 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
     return (
       <section className="px-14 mx-auto navbar bg-base-100 shadow-sm">
+
         {/* Navbar Left */}
         <div className="flex-1">
           <a className="text-2xl text-[#1F2937] font-bold">
@@ -35,8 +36,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `font-semibold text-base flex items-center gap-2 p-2 rounded-lg transition-all ${
                     isActive
-                      ? "bg-[#244D3F] text-white" // একটিভ হলে তোমার থিম কালার (সবুজ)
-                      : "text-gray-600 hover:bg-gray-100" // একটিভ না থাকলে নরমাল কালার
+                      ? "bg-[#244D3F] text-white"
+                      : "text-gray-600 hover:bg-gray-100"
                   }`
                 }
               >
@@ -49,8 +50,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   `font-semibold text-base flex items-center gap-2 p-2 rounded-lg transition-all ${
                     isActive
-                      ? "bg-[#244D3F] text-white" // একটিভ হলে তোমার থিম কালার (সবুজ)
-                      : "text-gray-600 hover:bg-gray-100" // একটিভ না থাকলে নরমাল কালার
+                      ? "bg-[#244D3F] text-white"
+                      : "text-gray-600 hover:bg-gray-100"
                   }`
                 }
                 to={"/stats"}
