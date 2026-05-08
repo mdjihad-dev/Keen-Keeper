@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../mainLayout/Root";
-import HomePage from './../pages/homePage/HomePage';
+import HomePage from "./../pages/homePage/HomePage";
 import FriendDetails from "../component/ui/friendDetails/FriendDetails";
 import TimelinePage from "../pages/timelinePage/TimelinePage";
 import StatsPage from "../pages/statsPage/StatsPage";
@@ -10,7 +10,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <ErrorPage/>,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -36,4 +36,4 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-export default router
+export default router;
